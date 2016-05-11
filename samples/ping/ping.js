@@ -17,6 +17,6 @@ bus.ready(function() {
 
 bus.init({
   host: 'rabbitmq-test',
-  queueName: 'ping-test',
+  queueName: 'ping-client-queue',
   transport: 'amqp'
 });
