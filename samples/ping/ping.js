@@ -1,11 +1,18 @@
 var bus = require('../../lib').create();
 
 bus.ready(function() {
-	bus.subscribe('PingMassTransit:Pong', function(msg) {
-		console.log('pong received');
+	bus.subscribe({queueName:'ping-test',messageType:'PingMassTransit:Pong'}, function(msg) {
+		console.log('pong received on ping-test');
 		console.log(msg);
-		process.exit();
+		//process.exit();
 	});
+
+	bus.subscribe('PingMassTransit:Pong', function(msg) {
+		console.log('pong received on default queue');
+		console.log(msg);
+	  throw "Consumer Error";
+	});
+
 
 	bus.publish('PingMassTransit:Ping', {
 		SomeString: 'yo',
@@ -17,6 +24,6 @@ bus.ready(function() {
 
 bus.init({
   host: 'rabbitmq-test',
-  queueName: 'ping-test',
+  queueNames: ['ping-test','ping-test2'],
   transport: 'amqp'
 });
