@@ -6,7 +6,8 @@
   ],
   "description": "node.js adapter for MassTransit Service Bus",
   "dependencies": {
-    "amqp": "0.0.2",
+    "amqp": "^0.2.4",
+    "guid": "0.0.12",
     "node-uuid": "1.1.0",
     "vows": "0.5.8"
   },
