@@ -44,6 +44,6 @@ bus.ready(function() {
 
 bus.init({
   host: 'rabbitmq-test',
-  queueName: 'request-client',
+  queueNames: [],
   transport: 'amqp'
 });
