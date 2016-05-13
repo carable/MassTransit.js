@@ -8,6 +8,7 @@
   "dependencies": {
     "amqp": "^0.2.4",
     "guid": "0.0.12",
+    "lodash": "^4.12.0",
     "node-uuid": "1.1.0",
     "vows": "0.5.8"
   },
