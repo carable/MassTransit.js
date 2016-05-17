@@ -43,7 +43,5 @@ bus.ready(function() {
 });
 
 bus.init({
-  host: 'rabbitmq-test',
-  queueNames: [],
-  transport: 'amqp'
+  host: 'rabbitmq-test'
 });

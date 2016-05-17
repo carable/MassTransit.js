@@ -31,7 +31,6 @@ bus.ready(function() {
 bus.init({
   host: 'rabbitmq-test',
   queueNames: ['ping-test','ping-test2'],
-  transport: 'amqp',
 	publishMessageTypes: {
 		"PingMassTransit:Ping": [
 			'PingMassTransit:Ping',
