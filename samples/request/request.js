@@ -1,30 +1,28 @@
 var bus = require('../../lib').create();
+var _ = require('lodash');
 
 var hasRun = false;
 
 var req = function(customerId) {
-	var dt = new Date();
-	var dtStr = dt.toISOString();
 
-	var req = {
-		requestExchange: 'request-service',
-		messageType: 'Sample.MessageTypes:ISimpleRequest',
-		message: {
-			timestamp: dtStr,
-			customerId: customerId
-		}
+	var msg = {
+		timestamp: new Date().toISOString(),
+		customerId: customerId
 	};
 
-	//console.log('request sent at', dtStr);
-	bus.request(req, function(response, error) {
-		if(error) {
-			console.log('error!', error);
+	bus.request('request-service', 'Sample.MessageTypes:ISimpleRequest', msg, function(clientError, response) {
+		if(clientError) {
+			console.log('client error!', msg, clientError);
 		} else {
-			var recDt = new Date();
-			console.log(response.message.cusomerName ,'received at', recDt.toISOString(), ' | ', new Date() - dt, 'ms');
-			//console.log(response);
+			if(!_.includes(response.messageType, 'urn:message:RequestService:RequestConsumer+SimpleResponse')) {
+				console.log('server error!', msg, response.messageType, response.message);
+			} else {
+				console.log('success!', response.message);
+			}
 		}
 	});
+	//, 5000);
+
 }
 
 var run = function(i) {
@@ -43,5 +41,6 @@ bus.ready(function() {
 });
 
 bus.init({
-  host: 'rabbitmq-test'
+  host: 'rabbitmq-test',
+	//requestTimeout: 3000
 });
