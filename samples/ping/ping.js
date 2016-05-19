@@ -16,6 +16,8 @@ bus.ready(function() {
 	}, function(message, context, queueName) {
 		console.log('message destined for [' + context.destinationAddress + '] received on queue [' + queueName + ']');
 		console.log(message);
+		var asdf = null;
+		null.notthere();
 	});
 
 	bus.publish('PingMassTransit:Ping', {

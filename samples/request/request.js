@@ -18,6 +18,12 @@ var req = function(customerId) {
 				console.log('server error!', msg, response.messageType, response.message);
 			} else {
 				console.log('success!', response.message);
+
+				//processing error test
+				if(response.message.cusomerName.endsWith('0')) {
+					var asdf = null;
+					asdf.notthere();
+				}
 			}
 		}
 	});
