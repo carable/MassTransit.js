@@ -14,7 +14,7 @@ var req = function(customerId) {
 		if(clientError) {
 			console.log('client error!', msg, clientError);
 		} else {
-			if(!_.includes(response.messageType, 'urn:message:RequestService:RequestConsumer+SimpleResponse')) {
+			if(!_.includes(response.messageType, 'RequestService:RequestConsumer+SimpleResponse')) {
 				console.log('server error!', msg, response.messageType, response.message);
 			} else {
 				console.log('success!', response.message);
