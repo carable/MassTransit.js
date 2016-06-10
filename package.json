@@ -10,6 +10,7 @@
     "guid": "0.0.12",
     "lodash": "^4.12.0",
     "node-uuid": "1.1.0",
+    "promise": "^7.1.1",
     "vows": "0.5.8"
   },
   "engines": {
