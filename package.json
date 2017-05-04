@@ -1,8 +1,9 @@
 {
-  "author": "Brian Mavity <brian@brianmavity.com> (http://www.brianmavity.com)",
+  "author": "Brian Rumburg <brian@rumburg.org>",
   "contributors": [
     "Brian Mavity <brian@brianmavity.com> (http://www.brianmavity.com)",
-    "Dru Sellers <dru@drusellers.com> (http://www.drusellers.com)"
+    "Dru Sellers <dru@drusellers.com> (http://www.drusellers.com)",
+    "Brian Rumburg <brian@rumburg.org>"
   ],
   "description": "node.js adapter for MassTransit Service Bus",
   "dependencies": {
@@ -23,7 +24,7 @@
   "name": "masstransit",
   "repository": {
     "type": "git",
-    "url": "git://github.com/drusellers/MassTransit.js.git"
+    "url": "git://github.com/brianrumburg/MassTransit.js.git"
   },
-  "version": "0.2.0"
+  "version": "0.2.1"
 }
