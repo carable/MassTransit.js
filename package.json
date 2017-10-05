@@ -10,9 +10,6 @@
     "node-uuid": "1.1.0",
     "vows": "0.5.8"
   },
-  "engines": {
-    "node": "~0.4.5"
-  },
   "keywords": [
     "esb"
   ],
