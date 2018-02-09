@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "standard"
+  ],
+  "env": {
+    "browser" : true
+  },
+  "globals": {
+    "__DEV__"      : false,
+    "__TEST__"     : false,
+    "__PROD__"     : false,
+    "__COVERAGE__" : false,
+    "Raven"        : false
+  },
+  "rules": {
+    "key-spacing"                 : "off",
+    "object-curly-spacing"        : [2, "always"],
+    "comma-dangle"                : "off",
+    "space-before-function-paren" : "off",
+    "one-var": "off",
+    "no-tabs": "off",
+    "semi": "off",
+    "indent": "off",
+    "max-len": "off",
+    "quotes": "off"
+  }
+}
