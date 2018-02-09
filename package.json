@@ -7,7 +7,7 @@
   ],
   "description": "node.js adapter for MassTransit Service Bus",
   "dependencies": {
-    "amqp": "^0.2.6",
+    "amqplib": "^0.5.2",
     "guid": "0.0.12",
     "lodash": "^4.12.0",
     "node-uuid": "1.1.0",
@@ -23,5 +23,13 @@
     "type": "git",
     "url": "git://github.com/brianrumburg/MassTransit.js.git"
   },
-  "version": "0.2.2"
+  "version": "0.2.2",
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
 }
