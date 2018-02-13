@@ -1,0 +1,51 @@
+{
+
+  "messageId": "64610000-93bc-d8fc-9193-08d37838ddb8",
+
+  "requestId": "64610000-93bc-d8fc-3090-08d37838ddb8",
+
+  "conversationId": "64610000-93bc-d8fc-95ea-08d37838ddb8",
+
+  "sourceAddress": "rabbitmq://192.168.99.100:5672/bus-L00152-Client.vshost-ctooyyruzucx3pmrbdjzoqg8ro?durable=false&autodelete=true&prefetch=16",
+
+  "destinationAddress": "rabbitmq://192.168.99.100/request_service",
+
+  "responseAddress": "rabbitmq://192.168.99.100:5672/bus-L00152-Client.vshost-ctooyyruzucx3pmrbdjzoqg8ro?durable=false&autodelete=true&prefetch=16",
+
+  "messageType": [
+
+    "urn:message:Sample.MessageTypes:ISimpleRequest"
+
+  ],
+
+  "message": {
+
+    "timestamp": "2016-05-09T18:36:42.271634Z",
+
+    "customerId": "chris"
+
+  },
+
+  "headers": {},
+
+  "host": {
+
+    "machineName": "L00152",
+
+    "processName": "Client.vshost",
+
+    "processId": 3284,
+
+    "assembly": "Client",
+
+    "assemblyVersion": "1.0.0.0",
+
+    "frameworkVersion": "4.0.30319.42000",
+
+    "massTransitVersion": "3.0.15.258",
+
+    "operatingSystemVersion": "Microsoft Windows NT 6.2.9200.0"
+
+  }
+
+}
