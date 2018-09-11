@@ -1,4 +1,6 @@
 {
+  "name": "@carable/masstransit",
+  "version": "1.0.0",
   "author": "Brian Rumburg <brian@rumburg.org>",
   "contributors": [
     "Brian Mavity <brian@brianmavity.com> (http://www.brianmavity.com)",
@@ -18,12 +20,10 @@
     "esb"
   ],
   "main": "./lib/index.js",
-  "name": "masstransit",
   "repository": {
     "type": "git",
-    "url": "git://github.com/brianrumburg/MassTransit.js.git"
+    "url": "git://github.com/carable/MassTransit.js.git"
   },
-  "version": "0.2.4",
   "devDependencies": {
     "eslint": "^4.16.0",
     "eslint-config-standard": "^11.0.0-beta.0",
