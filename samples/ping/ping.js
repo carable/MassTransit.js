@@ -15,8 +15,7 @@ bus.ready(function() {
 	}, function(message, context, queueName) {
 		console.log('message destined for [' + context.destinationAddress + '] received on queue [' + queueName + ']');
 		console.log(message);
-		var asdf = null;
-		null.notthere();
+		return Promise.reject(new Error("error"))
 	});
 	setTimeout(() => {
 		bus.publish('PingMassTransit:IPong', {
