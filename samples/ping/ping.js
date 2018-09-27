@@ -1,7 +1,6 @@
 var bus = require('../../lib').create();
 
 bus.ready(function() {
-
 	bus.subscribe({
 		queueName: 'ping-test',
 		messageType: 'PingMassTransit:IPong'
@@ -19,20 +18,27 @@ bus.ready(function() {
 		var asdf = null;
 		null.notthere();
 	});
-
-	bus.publish('PingMassTransit:Ping', {
-		SomeString: 'yo',
-		SomeInteger: 123,
-		SomeDecimal: 1.23,
-		SomeDate: new Date().toISOString(),
-		PingField: 'PING'
-	});
-
+	setTimeout(() => {
+		bus.publish('PingMassTransit:IPong', {
+			SomeString: 'yo',
+			SomeInteger: 123,
+			SomeDecimal: 1.23,
+			SomeDate: new Date().toISOString(),
+			PingField: 'PING'
+		});
+		bus.publish('PingMassTransit:Pong2', {
+			SomeString: 'yo',
+			SomeInteger: 123,
+			SomeDecimal: 1.23,
+			SomeDate: new Date().toISOString(),
+			PingField: 'PING'
+		});
+	}, 100)
 });
 
 bus.init({
   host: 'rabbitmq-test',
-  queueNames: ['ping-test','ping-test2'],
+  queueNames: ['ping-test', 'ping-test2'],
 	publishMessageTypes: {
 		"PingMassTransit:Ping": [
 			'PingMassTransit:Ping',
