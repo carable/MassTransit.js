@@ -61,7 +61,7 @@ Ask a queue for a message, as an RPC. This will be resolved with either false, i
 
 send a message to either a queue or just a messageType with the default Queue.
 
-`request(requestExchange, messageType, message, callback, timeout)`
+`subscribe(subscription, callback)`
 
 bind bus to either a Queue or a MessageType to listen to and retreive messages.
 
